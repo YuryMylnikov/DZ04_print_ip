@@ -1,3 +1,8 @@
+/**
+ * @file print_ip.cpp
+ *
+ * Functions for printing different types values as ip addresses.
+ */
 #include <list>
 #include <tuple>
 #include <vector>
@@ -6,6 +11,9 @@
 #include <type_traits>
 
 
+/**
+ * @brief Prints ip address as integer value.
+ */
 template<typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
 void print(T val)
 {
@@ -21,6 +29,9 @@ void print(T val)
 }
 
 
+/**
+ * @brief Prints ip address as string value.
+ */
 template<typename T, typename = std::enable_if_t<std::is_same_v<T, std::string>>>
 void print(const T& val)
 {
@@ -28,6 +39,9 @@ void print(const T& val)
 }
 
 
+/**
+ * @brief Prints ip address as container (vector or list) value.
+ */
 template
 <
 	template<typename...> typename T, 
@@ -63,6 +77,11 @@ void print(const T<Args...>& container)
 }
 
 
+/**
+ * \defgroup helpers
+ * Helpers for tuple printer.
+ */
+/**@{*/
 template<size_t index, typename Head, typename... Args>
 struct print_tuple_elements
 {
@@ -83,8 +102,12 @@ struct print_tuple_elements<0, Head, Args...>
 		std::cout << std::get<0>(tup);
 	}
 };
+/**@}*/
 
 
+/**
+ * @brief Prints ip address as tuple value.
+ */
 template
 <
 	template<typename...> typename T, 
@@ -109,6 +132,9 @@ void print(const T<Head, Args...>& tup)
 }
 
 
+/**
+ * @brief Function wraper for all printers.
+ */
 template<typename T>
 void print_ip(const T& val)
 {
@@ -117,6 +143,9 @@ void print_ip(const T& val)
 }
 
 
+/**
+ * @brief Main function.
+ */
 int main()
 {
 	{
