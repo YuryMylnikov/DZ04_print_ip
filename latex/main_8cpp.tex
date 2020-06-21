@@ -1,0 +1,107 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$tuple$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$bitset$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structprint__tuple__elements}{print\+\_\+tuple\+\_\+elements$<$ index, Head, Args $>$}
+\item 
+struct \hyperlink{structprint__tuple__elements_3_010_00_01_head_00_01_args_8_8_8_01_4}{print\+\_\+tuple\+\_\+elements$<$ 0, Head, Args... $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+integral\+\_\+v$<$\+T$>$$>$$>$ }\\void \hyperlink{main_8cpp_ab0ee94f0f283926675c2820c1e63c9e3}{print} (T val)
+\begin{DoxyCompactList}\small\item\em Prints ip address as integer value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same\+\_\+v$<$\+T, std\+::string$>$$>$$>$ }\\void \hyperlink{main_8cpp_add22f80e675a041f07648b701fc81b88}{print} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Prints ip address as string value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename... $>$ typename T, typename... Args, typename  = std\+::enable\+\_\+if\+\_\+t $<$		std\+::is\+\_\+same\+\_\+v		$<$			\+T$<$\+Args...$>$,			std\+::vector$<$\+Args...$>$		$>$		$\vert$$\vert$		std\+::is\+\_\+same\+\_\+v		$<$			\+T$<$\+Args...$>$,			std\+::list$<$\+Args...$>$		$>$	$>$$>$ }\\void \hyperlink{main_8cpp_aa493d86bff454f600112ae8ce5d4a76d}{print} (const T$<$ Args... $>$ \&container)
+\begin{DoxyCompactList}\small\item\em Prints ip address as container (vector or list) value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename... $>$ typename T, typename Head , typename... Args, typename  = std\+::enable\+\_\+if\+\_\+t $<$ 			std\+::is\+\_\+same\+\_\+v			$<$ 				\+T$<$\+Head, Args...$>$,				std\+::tuple$<$\+Head, Args...$>$			$>$			\&\&			(std\+::is\+\_\+same\+\_\+v$<$\+Head, Args$>$ \&\& ...)	$>$$>$ }\\void \hyperlink{main_8cpp_a9c57fe1bf9672697161c72eafc9fb786}{print} (const T$<$ Head, Args... $>$ \&tup)
+\begin{DoxyCompactList}\small\item\em Prints ip address as tuple value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{main_8cpp_a7035d809552e6b68035896f4c083ce6b}{print\+\_\+ip} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Function wraper for all printers. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Main function. 
+
+\index{main.\+cpp@{main.\+cpp}!print@{print}}
+\index{print@{print}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print(\+T val)}{print(T val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+integral\+\_\+v$<$\+T$>$$>$$>$ void print (
+\begin{DoxyParamCaption}
+\item[{T}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_ab0ee94f0f283926675c2820c1e63c9e3}{}\label{main_8cpp_ab0ee94f0f283926675c2820c1e63c9e3}
+
+
+Prints ip address as integer value. 
+
+\index{main.\+cpp@{main.\+cpp}!print@{print}}
+\index{print@{print}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print(const T \&val)}{print(const T &val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+same\+\_\+v$<$\+T, std\+::string$>$$>$$>$ void print (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_add22f80e675a041f07648b701fc81b88}{}\label{main_8cpp_add22f80e675a041f07648b701fc81b88}
+
+
+Prints ip address as string value. 
+
+\index{main.\+cpp@{main.\+cpp}!print@{print}}
+\index{print@{print}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print(const T$<$ Args... $>$ \&container)}{print(const T< Args... > &container)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ typename... $>$ typename T, typename... Args, typename  = std\+::enable\+\_\+if\+\_\+t $<$		std\+::is\+\_\+same\+\_\+v		$<$			\+T$<$\+Args...$>$,			std\+::vector$<$\+Args...$>$		$>$		$\vert$$\vert$		std\+::is\+\_\+same\+\_\+v		$<$			\+T$<$\+Args...$>$,			std\+::list$<$\+Args...$>$		$>$	$>$$>$ void print (
+\begin{DoxyParamCaption}
+\item[{const T$<$ Args... $>$ \&}]{container}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_aa493d86bff454f600112ae8ce5d4a76d}{}\label{main_8cpp_aa493d86bff454f600112ae8ce5d4a76d}
+
+
+Prints ip address as container (vector or list) value. 
+
+\index{main.\+cpp@{main.\+cpp}!print@{print}}
+\index{print@{print}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print(const T$<$ Head, Args... $>$ \&tup)}{print(const T< Head, Args... > &tup)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ typename... $>$ typename T, typename Head , typename... Args, typename  = std\+::enable\+\_\+if\+\_\+t $<$ 			std\+::is\+\_\+same\+\_\+v			$<$ 				\+T$<$\+Head, Args...$>$,				std\+::tuple$<$\+Head, Args...$>$			$>$			\&\&			(std\+::is\+\_\+same\+\_\+v$<$\+Head, Args$>$ \&\& ...)	$>$$>$ void print (
+\begin{DoxyParamCaption}
+\item[{const T$<$ Head, Args... $>$ \&}]{tup}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a9c57fe1bf9672697161c72eafc9fb786}{}\label{main_8cpp_a9c57fe1bf9672697161c72eafc9fb786}
+
+
+Prints ip address as tuple value. 
+
+\index{main.\+cpp@{main.\+cpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(const T \&val)}{print_ip(const T &val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a7035d809552e6b68035896f4c083ce6b}{}\label{main_8cpp_a7035d809552e6b68035896f4c083ce6b}
+
+
+Function wraper for all printers. 
+
